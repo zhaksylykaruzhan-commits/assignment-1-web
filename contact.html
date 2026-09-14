@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Exploration | Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title">Space Exploration</h1>
+    <p class="tagline">A student guide to rockets, cosmodromes and the history of spaceflight</p>
+  </header>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Baikonur</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contact / Mission Sign-up Form</h1>
+    <p>
+      Fill in the form below to "sign up" for updates about upcoming launches. This form does not
+      send any real data &mdash; it is a demonstration of HTML form elements built for this
+      assignment.
+    </p>
+
+    <audio controls>
+      <source src="media/launch_countdown.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="audio-label">Listen: a short original launch countdown sound effect</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="10" max="100" placeholder="e.g. 20">
+      </fieldset>
+
+      <fieldset>
+        <legend>Mission Preferences</legend>
+
+        <label for="favcolor">Favorite Mission Patch Color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#1b3a6b">
+
+        <p>Which destination interests you most?</p>
+        <div class="choice-row">
+          <input type="radio" id="dest-moon" name="destination" value="moon" checked>
+          <label for="dest-moon">Moon</label>
+        </div>
+        <div class="choice-row">
+          <input type="radio" id="dest-mars" name="destination" value="mars">
+          <label for="dest-mars">Mars</label>
+        </div>
+        <div class="choice-row">
+          <input type="radio" id="dest-iss" name="destination" value="iss">
+          <label for="dest-iss">International Space Station</label>
+        </div>
+
+        <p>Which topics would you like updates about? (choose any)</p>
+        <div class="choice-row">
+          <input type="checkbox" id="topic-launches" name="topics" value="launches">
+          <label for="topic-launches">New launches</label>
+        </div>
+        <div class="choice-row">
+          <input type="checkbox" id="topic-history" name="topics" value="history">
+          <label for="topic-history">Space history</label>
+        </div>
+        <div class="choice-row">
+          <input type="checkbox" id="topic-tech" name="topics" value="technology">
+          <label for="topic-tech">Rocket technology</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Message</legend>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Write your message here (max 500 characters)"></textarea>
+      </fieldset>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zhaksylyk Aruzhan &mdash; Assignment #1, IT2511, Astana IT University</p>
+  </footer>
+</body>
+</html>
