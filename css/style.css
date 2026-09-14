@@ -1,0 +1,316 @@
+/* =========================================================
+   Assignment #1 - style.css
+   Colors used (3-4 colors, each written in 3 different formats):
+   1. Deep space blue  -> name: navy      | hex: #1b3a6b | rgb: rgb(27, 58, 107)
+   2. Warm flame orange -> name: orange    | hex: #ff7a30 | hsl: hsl(21, 100%, 59%)
+   3. Off-white text    -> name: white     | hex: #f4f6fb | rgb: rgb(244, 246, 251)
+   4. Dark background   -> name: black     | hex: #0e1220 | hsl: hsl(230, 38%, 9%)
+
+   Units used (at least 3, explained here as required by Task 4):
+   - px   : used for borders and fixed spacing where exact pixel control matters (e.g. 1px borders)
+   - rem  : used for font sizes so text scales relative to the root font size, keeping typography
+            consistent across the whole site even if the user changes their browser's base size
+   - %    : used for widths of flexible elements (like table and image containers) so they resize
+            smoothly with the size of the screen
+   - em   : used for padding inside buttons/links so the spacing scales together with the text size
+   - vh   : used for the header's minimum height so it always fills a proportion of the viewport
+   ========================================================= */
+
+/* ----- Base / element selectors ----- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #0e1220;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  color: #1b3a6b;
+}
+
+p {
+  font-size: 1rem;
+  max-width: 70%;
+  margin: 0.75rem auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #1b3a6b;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* ----- Header (ID selector - the only unique header element) ----- */
+header {
+  background-color: rgb(27, 58, 107);
+  color: #f4f6fb;
+  text-align: center;
+  padding: 2em 1em;
+  min-height: 18vh;
+}
+
+#site-header-note {
+  /* reserved unique id example if needed on a single element */
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color:#ff7a30
+}
+
+.tagline {
+  margin: 0.5em 0 0 0;
+  font-style: italic;
+  color: #d7e0f5;
+}
+
+/* ----- Navigation ----- */
+nav {
+  background-color: hsl(230, 38%, 9%);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0.8em 0;
+}
+
+.navbar li a {
+  color: #f4f6fb;
+  text-decoration: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.navbar li a:hover {
+  background-color: #ff7a30;
+  transform: translateY(-3px);
+}
+
+.navbar li a.active {
+  background-color: #1b3a6b;
+  border: 1px solid #ff7a30;
+}
+
+/* ----- Main content ----- */
+main {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1.5em;
+}
+
+main h1 {
+  text-align: center;
+}
+
+section {
+  margin-bottom: 2.5em;
+}
+
+ul, ol {
+  max-width: 70%;
+  margin: 0.75rem auto;
+  padding-left: 1.5em;
+}
+
+figure {
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  border-left: 4px solid #ff7a30;
+  margin: 1.5em 10%;
+  padding: 0.5em 1.5em;
+  background-color: #eef1fa;
+  font-style: italic;
+}
+
+iframe {
+  display: block;
+  margin: 1em auto;
+  border: 3px solid #1b3a6b;
+  max-width: 100%;
+}
+
+#gallery {
+  text-align: center;
+}
+
+#gallery figure {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+}
+
+/* ----- Table styling ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #1b3a6b;
+}
+
+th, td {
+  border: 1px solid #1b3a6b;
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
+thead th {
+  background-color: #1b3a6b;
+  color: #f4f6fb;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eef1fa;
+}
+
+tbody tr:hover {
+  background-color: #ffe6d5;
+}
+
+tfoot td {
+  font-size: 0.85rem;
+  font-style: italic;
+  background-color: #d7e0f5;
+}
+
+/* ----- Form styling ----- */
+form {
+  max-width: 600px;
+  margin: 1.5em auto;
+  background-color: #ffffff;
+  padding: 1.5em;
+  border: 1px solid #d7e0f5;
+  border-radius: 8px;
+}
+
+fieldset {
+  border: 1px solid #1b3a6b;
+  border-radius: 6px;
+  margin-bottom: 1.2em;
+  padding: 1em;
+}
+
+legend {
+  font-weight: bold;
+  color: #1b3a6b;
+  padding: 0 0.5em;
+}
+
+form label {
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+.choice-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0.4em 0;
+}
+
+.choice-row label {
+  display: inline;
+  margin: 0;
+  font-weight: normal;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 0.4em;
+  width: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #b7c2de;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  width: auto;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff7a30;
+  box-shadow: 0 0 0 3px rgba(255, 122, 48, 0.3);
+}
+
+button[type="submit"] {
+  background-color: #ff7a30;
+  color: #ffffff;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #1b3a6b;
+}
+
+audio {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.audio-label {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: #0e1220;
+  color: #f4f6fb;
+  text-align: center;
+  padding: 1.2em;
+  font-size: 0.85rem;
+}
